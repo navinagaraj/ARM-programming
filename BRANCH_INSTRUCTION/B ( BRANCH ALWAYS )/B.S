@@ -1,0 +1,12 @@
+		AREA NAVI,CODE,READONLY
+			
+		ENTRY
+		
+		MOV R0,#0X0000000F
+		MOV R1,#1
+LOOP
+		SUBS R0,R1
+		
+		B LOOP
+		
+		END
