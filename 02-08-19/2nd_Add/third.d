@@ -1,0 +1,1 @@
+.\third.o: THIRD.S

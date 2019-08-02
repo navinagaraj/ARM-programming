@@ -1,0 +1,34 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             NAVEEN,CODE,READONLY
+    2 00000000         
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3A0000A        MOV              R0,#10
+    6 00000004 E3A0100A        MOV              R1,#10
+    7 00000008 E0800001        ADD              R0,R1
+    8 0000000C         
+    9 0000000C                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\second.d -o.\second.o 
+-IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --
+predefine="__EVAL SETA 1" --list=.\second.lst second.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+NAVEEN 00000000
+
+Symbol: NAVEEN
+   Definitions
+      At line 1 in file second.s
+   Uses
+      None
+Comment: NAVEEN unused
+1 symbol
+332 symbols in table

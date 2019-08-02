@@ -1,0 +1,35 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ITSME, CODE, READONLY
+    2 00000000         
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3E0B000        MOV              R11,#0XFFFFFFFF
+    6 00000004 E3E0C000        MOV              R12,#0XFFFFFFFF
+    7 00000008         
+    8 00000008 E09B100C        ADDS             R1,R11,R12
+    9 0000000C         
+   10 0000000C                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\adds.d -o.\adds.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --pred
+efine="__EVAL SETA 1" --list=.\adds.lst ..\ADDS\ADDS.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ITSME 00000000
+
+Symbol: ITSME
+   Definitions
+      At line 1 in file ..\ADDS\ADDS.S
+   Uses
+      None
+Comment: ITSME unused
+1 symbol
+332 symbols in table

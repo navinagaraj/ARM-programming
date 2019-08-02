@@ -1,0 +1,36 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             UNATHU, CODE, READONLY
+    2 00000000         
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3E00000        MOV              R0,#0XFFFFFFFF
+    6 00000004 E3E01000        MOV              R1,#0XFFFFFFFF
+    7 00000008 E0900001        ADDS             R0,R1
+    8 0000000C E3A03000        MOV              R3,#0X00
+    9 00000010 E0A33000        ADC              R3,R0
+   10 00000014         
+   11 00000014                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\adc.d -o.\adc.o -IC:\K
+eil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=.\adc.lst ..\ADC\ADC.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+UNATHU 00000000
+
+Symbol: UNATHU
+   Definitions
+      At line 1 in file ..\ADC\ADC.S
+   Uses
+      None
+Comment: UNATHU unused
+1 symbol
+332 symbols in table

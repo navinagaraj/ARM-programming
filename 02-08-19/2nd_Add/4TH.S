@@ -1,0 +1,9 @@
+			AREA NAVEEN ,CODE	,READONLY
+				
+			ENTRY
+			
+			MOV R0,#0X0013
+			MOV R1,#0X0012
+			ADD R2,R0,R1
+			
+			END
