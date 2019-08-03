@@ -1,0 +1,94 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             UNADHU, CODE, READONLY
+    2 00000000         
+    3 00000000         ENTRY
+    4 00000000         
+    5 00000000 E59F1010        LDR              R1,= ARM_STATE
+    6 00000004 E59F0010        LDR              R0,= ARM_ST
+    7 00000008 E5912000        LDR              R2,[R1]
+    8 0000000C E5802000        STR              R2,[R0]
+    9 00000010         
+   10 00000010 EAFFFFFE 
+                       B1      B                B1
+   11 00000014         
+   12 00000014 FFFFFFFF 
+                       ARM_STATE
+                               DCD              0XFFFFFFFF
+   13 00000018         
+   14 00000018 00000000 
+              00000000         AREA             ME, DATA,READWRITE
+   15 00000000 00000000 
+                       ARM_ST  DCD              0
+   16 00000004         
+   17 00000004                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\ldr2.d -o.\ldr2.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --pred
+efine="__EVAL SETA 1" --list=.\ldr2.lst LDR2.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARM_STATE 00000014
+
+Symbol: ARM_STATE
+   Definitions
+      At line 12 in file LDR2.S
+   Uses
+      At line 5 in file LDR2.S
+Comment: ARM_STATE used once
+B1 00000010
+
+Symbol: B1
+   Definitions
+      At line 10 in file LDR2.S
+   Uses
+      At line 10 in file LDR2.S
+Comment: B1 used once
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 3 in file LDR2.S
+   Uses
+      None
+Comment: ENTRY unused
+UNADHU 00000000
+
+Symbol: UNADHU
+   Definitions
+      At line 1 in file LDR2.S
+   Uses
+      None
+Comment: UNADHU unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARM_ST 00000000
+
+Symbol: ARM_ST
+   Definitions
+      At line 15 in file LDR2.S
+   Uses
+      At line 6 in file LDR2.S
+Comment: ARM_ST used once
+ME 00000000
+
+Symbol: ME
+   Definitions
+      At line 14 in file LDR2.S
+   Uses
+      None
+Comment: ME unused
+2 symbols
+339 symbols in table

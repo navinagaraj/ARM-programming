@@ -1,0 +1,33 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             YOURSELF, CODE, READONLY
+    2 00000000         
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3A01001        MOV              R1,#0X00000001
+    6 00000004 E5910000        LDR              R0,[R1]
+    7 00000008         
+    8 00000008                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\ldr.d -o.\ldr.o -IC:\K
+eil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=.\ldr.lst LDR.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+YOURSELF 00000000
+
+Symbol: YOURSELF
+   Definitions
+      At line 1 in file LDR.S
+   Uses
+      None
+Comment: YOURSELF unused
+1 symbol
+332 symbols in table
