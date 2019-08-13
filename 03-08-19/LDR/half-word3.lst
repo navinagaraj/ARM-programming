@@ -1,0 +1,89 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SAMPLE, CODE, READONLY
+    2 00000000         
+    3 00000000         ENTRY
+    4 00000000 E3A0A004        MOV              R10,0X00000004
+    5 00000004 E3A0B001        MOV              R11,0X00000001
+    6 00000008 E59F1014        LDR              R1,ARM_STATE
+    7 0000000C E59F0018        LDR              R0,ARM_ST
+    8 00000010         LOOP
+    9 00000010 E4912004        LDR              R2,[R1],#4
+   10 00000014 E4C02004        STRB             R2,[R0],#4
+   11 00000018 E05AA00B        SUBS             R10,R11
+   12 0000001C 1AFFFFFB        BNE              LOOP
+   13 00000020         
+   14 00000020 EAFFFFFE 
+                       REPEAT  B                REPEAT
+   15 00000024         
+   16 00000024 0F0F0F0F 
+              000000FF ARM_STATE
+                               DCD              0X0F0F0F0F,0X000000FF
+   17 0000002C                 AREA             SAMPLE, CODE, READWRITE
+   18 0000002C 00000000 
+                       ARM_ST  DCD              0
+                       
+Command Line: --debug --xref --apcs=interwork --depend=.\half-word3.d -o.\half-
+word3.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Ph
+ilips --predefine="__EVAL SETA 1" --list=.\half-word3.lst ..\..\06-08-19\Half-w
+ord\half-word3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARM_ST 0000002C
+
+Symbol: ARM_ST
+   Definitions
+      At line 18 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      At line 7 in file ..\..\06-08-19\Half-word\half-word3.s
+Comment: ARM_ST used once
+ARM_STATE 00000024
+
+Symbol: ARM_STATE
+   Definitions
+      At line 16 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      At line 6 in file ..\..\06-08-19\Half-word\half-word3.s
+Comment: ARM_STATE used once
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 3 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 8 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      At line 12 in file ..\..\06-08-19\Half-word\half-word3.s
+Comment: LOOP used once
+REPEAT 00000020
+
+Symbol: REPEAT
+   Definitions
+      At line 14 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      At line 14 in file ..\..\06-08-19\Half-word\half-word3.s
+Comment: REPEAT used once
+SAMPLE 00000000
+
+Symbol: SAMPLE
+   Definitions
+      At line 1 in file ..\..\06-08-19\Half-word\half-word3.s
+   Uses
+      None
+Comment: SAMPLE unused
+6 symbols
+337 symbols in table

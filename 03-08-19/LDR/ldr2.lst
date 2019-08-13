@@ -18,12 +18,12 @@ ARM Macro Assembler    Page 1
    11 00000014         
    12 00000014 FFFFFFFF 
                        ARM_STATE
-                               DCD              0XFFFFFFFF
+                               &                0XFFFFFFFF
    13 00000018         
    14 00000018 00000000 
               00000000         AREA             ME, DATA,READWRITE
    15 00000000 00000000 
-                       ARM_ST  DCD              0
+                       ARM_ST  &                0
    16 00000004         
    17 00000004                 END
 Command Line: --debug --xref --apcs=interwork --depend=.\ldr2.d -o.\ldr2.o -IC:

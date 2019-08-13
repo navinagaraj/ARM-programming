@@ -1,0 +1,12 @@
+		AREA NAVI,CODE,READONLY
+			
+		ENTRY
+		
+		MOV R0,#100
+		MOV R1,#100
+LOOP
+		SUBS R0,R1
+		
+		BEQ LOOP
+		
+		END

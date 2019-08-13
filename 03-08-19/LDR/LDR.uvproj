@@ -399,9 +399,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>LDR2.S</FileName>
+              <FileName>half-word3.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\LDR2.S</FilePath>
+              <FilePath>..\..\06-08-19\Half-word\half-word3.s</FilePath>
             </File>
           </Files>
         </Group>
